@@ -26,36 +26,36 @@
 }
 
 .card1{
-background-image: url(./img/yandex-music.png);
+background-image: url(../img/yandex-music.png);
 background-size: cover;
 }
 .card2{
-background-image: url(./img/catl_autojosh.jpg);
+background-image: url(../img/catl_autojosh.jpg);
 background-size: cover;
 }
 .card3{
-    background-image: url(./img/Image20250621150241.png);
+    background-image: url(../img/Image20250621150241.png);
 background-size: cover;
 }
 .card4{
-      background-image: url(./img/1e6a7a77778d4d0425517ecdb7c24ddb.webp);
+      background-image: url(../img/1e6a7a77778d4d0425517ecdb7c24ddb.webp);
 background-size: cover;
 }
 .card5{
-         background-image: url(./img/Image20250621152031.png);
+         background-image: url(../img/Image20250621152031.png);
 background-size: cover;
 }
 .card6{
 background-color: yellow;
- background-image: url(./img/Image20250621152212.png);
+ background-image: url(../img/Image20250621152212.png);
 background-size: cover;
 }
 .card7{
- background-image: url(./img/p1_3827152_c08d9702.jpg);
+ background-image: url(../img/p1_3827152_c08d9702.jpg);
 background-size: cover;
 }
 .card8{
- background-image: url(./img/sayr.png);
+ background-image: url(../img/sayr.png);
 background-size: cover;
 }
 

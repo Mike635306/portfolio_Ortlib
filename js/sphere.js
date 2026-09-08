@@ -1,9 +1,27 @@
-  // Check if Three.js loaded
-        if (typeof THREE === 'undefined') {
-            document.getElementById('loading').innerHTML = '<div class="error">Error: Three.js failed to load.<br>Please check your internet connection.</div>';
-        } else {
-            initScene();
+        // Check if Three.js loaded, with retry mechanism
+        let attemptCount = 0;
+        const maxAttempts = 50; // ~5 seconds max wait
+        
+        function checkAndInit() {
+            if (typeof THREE === 'undefined') {
+                attemptCount++;
+                if (attemptCount < maxAttempts) {
+                    // Retry after 100ms
+                    setTimeout(checkAndInit, 100);
+                } else {
+                    // Failed to load Three.js
+                    const loading = document.getElementById('loading');
+                    if (loading) {
+                        loading.innerHTML = '<div class="error">Error: Three.js failed to load.<br>Please check your internet connection and refresh the page.</div>';
+                    }
+                }
+            } else {
+                initScene();
+            }
         }
+        
+        // Start checking for THREE.js
+        checkAndInit();
 
         function initScene() {
             try {

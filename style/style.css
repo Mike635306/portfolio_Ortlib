@@ -16,17 +16,17 @@
 
 @font-face{
 font-family:'Stout';
-src: url(./fonts/Compact.ttf);
+src: url(../fonts/Compact.ttf);
 }
 
 @font-face{
 font-family:'Compact';
-src: url(./fonts/LTBinaryNeueRound-Bold.ttf);
+src: url(../fonts/LTBinaryNeueRound-Bold.ttf);
 }
 
 @font-face{
 font-family: addcd;
-src: url(./fonts/FaqroExtended-Regular.ttf);
+src: url(../fonts/FaqroExtended-Regular.ttf);
 }
 
 body,html{
