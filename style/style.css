@@ -313,8 +313,8 @@ color: darkcyan;
 font-family: var(--primary-font);
 margin-top: 10px;
 overflow-wrap: anywhere;
-
-
+color:rgb(238, 130, 238);
+color:rgb(128, 0, 128);
 }
 
 @media screen and (max-width: 700px){

@@ -134,7 +134,7 @@
                         context.clearRect(0, 0, canvas.width, canvas.height);
                         
                         // Draw text
-                        context.fillStyle = 'white';
+                        context.fillStyle = 'rgba(1, 255, 179, 0.993)';
                         context.font = 'bold 20px Courier New';
                         context.textAlign = 'center';
                         context.textBaseline = 'middle';
