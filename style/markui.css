@@ -12,8 +12,8 @@
   width: calc(300px * 14); /* 7 cards × 2 */
 }
 .card {
-  width: 250px;
-  height: 150px;
+  width: 270px;
+  height: 250px;
   background: black;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   margin-right: 20px;

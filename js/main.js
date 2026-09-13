@@ -6,7 +6,7 @@ const TelegramBtn = document.getElementById('btue');
 const GitHubBtn = document.getElementById('btuy');
 const GITHUB_LINK  = 'https://github.com/Mike635306';
 const TME_LINK = 'https://max.ru/u/f9LHodD0cOIAPHSWh0OWloB_CmnT2fZS00JEq5LqoSYM8bh3WIooPGZCvdw';
-const Telegram_LINK = 'https://web.telegram.org/a/#-1001674224047';
+const Telegram_LINK = 'https://t.me/Cmirte';
 
 const openLink = (button, url) => {
   button?.addEventListener('click', () => {
