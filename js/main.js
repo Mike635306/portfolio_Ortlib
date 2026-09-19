@@ -4,6 +4,12 @@ const tmeBtn = document.getElementById('tme');
 const maxBtn = document.getElementById('btuq');
 const TelegramBtn = document.getElementById('btue');
 const GitHubBtn = document.getElementById('btuy');
+const Max = document.getElementById('Write');
+const TG = document.getElementById('Writeqe');
+const Web = document.getElementById('Writew');
+const webtg = document.getElementById('Writeqde');
+const tfeBtn = document.getElementById('Writep');
+const wddsBtn = document.getElementByid('Writeqebr');
 const GITHUB_LINK  = 'https://github.com/Mike635306';
 const TME_LINK = 'https://max.ru/u/f9LHodD0cOIAPHSWh0OWloB_CmnT2fZS00JEq5LqoSYM8bh3WIooPGZCvdw';
 const Telegram_LINK = 'https://t.me/Cmirte';
@@ -20,6 +26,12 @@ openLink(msgBtn, TME_LINK);
 openLink(maxBtn, TME_LINK);
 openLink(TelegramBtn, Telegram_LINK);
 openLink(GitHubBtn, GITHUB_LINK);
+openLink(Max, TME_LINK);
+openLink(TG, Telegram_LINK);
+openLink(Web, TME_LINK);
+openLink(webtg, Telegram_LINK);
+openLink(tfeBtn, TME_LINK);
+openLink(wddsBtn, Telegram_LINK);
 
 
 document.addEventListener('DOMContentLoaded',()=>{

@@ -7,6 +7,9 @@
 @import url(./mirv.css);
 @import url(./midia.css);
 @import url(./buts.css);
+@import url(./scils.css);
+@import url(./card.css);
+
 :root{
 --primary-font:'Stout';
 --secondary-font:'Compact';
@@ -34,6 +37,7 @@ body,html{
     width: 100%;
     min-width: 0;
 }
+
 body{
 background: var(--bg-color);
 color: greenyellow;
@@ -72,8 +76,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-& h1{
-
+     & h1{
 font-size: 4rem;
 font-family: var(--primary-font);
 padding: 3px;
@@ -152,12 +155,7 @@ transform: rotateY(0deg)translateZ(150px);
 text-shadow:0 0px 10px rgba(100, 202, 4, 0.75), 0 0px 20px rgb(8, 32, 255);
 
 }
-
-
-
 }
-
-
 }
 
 
@@ -178,7 +176,6 @@ text-shadow:0 0px 10px rgba(100, 202, 4, 0.75), 0 0px 20px rgb(8, 32, 255);
             color: color;
         }
     }
-
 
 
     
@@ -226,12 +223,13 @@ font-family: var(--primary-font);
 
 }
 
-.about-skill{
-    display: flex;
+.about-skim{
+    display: none;
     gap: 10px;
 }
 
 .skill-item{
+display:none;
 color: whitesmoke;
 border-radius: 20px;
 padding: 5px;
@@ -258,12 +256,20 @@ justify-content: center;
     width: min(400px, 100%);
 }
 }
-#Ortlib{
-width: min(600px, 100%);
-height: auto;
-display: block;
-margin: 0;
+
+#Ortlib {
+    
+  width: 500px;
+  height:auto;
+  display: block;
+  border-radius: 20px;
+  cursor: pointer;
+  border:1px solid rgba(83, 154, 255, 0.45) ;
+  
 }
+
+
+
 .projects{
         height: auto;
         min-height: 100vh;
@@ -316,7 +322,29 @@ overflow-wrap: anywhere;
 
 }
 
+#list-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-height: 210px;
+  overflow-x: auto;
+  padding-right: 0.15rem;
+}
+
+#list-skills::-webkit-scrollbar {
+    background: black;
+    color:rgb(173, 255, 47);
+  width: 5px;
+}
+
+#list-skills::-webkit-scrollbar-thumb {
+  background: #095bd6;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 700px){
+   
+
     .container{
         padding-left: 16px;
         padding-right: 16px;
@@ -384,10 +412,12 @@ overflow-wrap: anywhere;
         overflow-wrap: anywhere;
     }
 
-    .about-skill{
+    .about-skim{
+        display:flex;
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
+    
     }
 
     .projects_invite{

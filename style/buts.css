@@ -1,14 +1,14 @@
 .buts {
-   display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 12px;
   width: 100%;
-  max-width: 400px; /* ограничитель ширины, по желанию */
-  margin: 20px auto;           /* центрирование блока, по желанию */
+  max-width: 800px; /* ограничитель ширины, по желанию */
+  margin: 20px auto;  
+        /* центрирование блока, по желанию */
 }
 
 .buts button{
-  width: 100%;
+  width: 120px;
   min-height: 44px;
 }
 
