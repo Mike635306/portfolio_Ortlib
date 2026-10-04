@@ -2,11 +2,14 @@
 .input {
   display: flex;
   flex-direction: row;
-  width: auto;
+  flex-wrap: wrap;
+  width: 100%;
   background-color: #0d1117;
   justify-content: center;
+  gap: 4px;
   border-radius: 5px;
   align-items: center;
+  padding: 8px;
 }
 
 .value {
@@ -19,7 +22,8 @@
   gap: 5px;
   cursor: pointer;
   border-radius: 4px;
-  margin: 0 10px 0 10px;
+  margin: 0;
+  align-items: center;
 }
 
 .value:not(:active):hover,
@@ -61,4 +65,3 @@
 
 
 }
-

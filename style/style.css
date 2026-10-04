@@ -164,6 +164,7 @@ text-shadow:0 0px 10px rgba(100, 202, 4, 0.75), 0 0px 20px rgb(8, 32, 255);
         min-height: 100vh;
        position: relative; 
     font-family: var(--primary-font);
+    padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px);
 
 
     & h2{
@@ -174,6 +175,7 @@ text-shadow:0 0px 10px rgba(100, 202, 4, 0.75), 0 0px 20px rgb(8, 32, 255);
             text-shadow:0 0px 10px rgba(255,255,255,.75);
             animation: blink 10s infinite linear;
             color: color;
+            margin-bottom: clamp(24px, 3vw, 40px);
         }
     }
 
@@ -185,12 +187,16 @@ color: darkcyan;
 font-family: var(--primary-font);
 }
 .about-info{
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 3vw, 48px);
 }
 
 .about-skills{
-width: 50%;
-height: calc(100vh - 100px);
+width: 100%;
+min-width: 0;
+min-height: 360px;
 display: flex;
 align-items: center;
 position: relative;
@@ -246,22 +252,24 @@ color: darkblue;
 }
 .about-greeting{
 color: darkcyan;
-width: 50%;
-height: calc(100vh - 100px );
+width: 100%;
+min-height: 360px;
 display: flex;
 align-items: center;
 justify-content: center;
  font-family: var(--primary-font);
 & p{
     width: min(400px, 100%);
+    line-height: 1.7;
 }
 }
 
 #Ortlib {
-    
-  width: 500px;
+  width: 100%;
+  max-width: 360px;
   height:auto;
   display: block;
+  justify-self: center;
   border-radius: 20px;
   cursor: pointer;
   border:1px solid rgba(83, 154, 255, 0.45) ;
@@ -274,6 +282,7 @@ justify-content: center;
         height: auto;
         min-height: 100vh;
         position: relative; 
+        padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px);
         & h2{
             font-size: 3rem;
           font-family: var(--primary-font);
@@ -282,6 +291,7 @@ justify-content: center;
             text-shadow:0 0px 10px rgba(255,255,255,.75);
             animation: blink 10s infinite linear;
             color: color;
+            margin-bottom: clamp(24px, 3vw, 40px);
         }
     }   
  
@@ -301,11 +311,12 @@ font-size: 2rem;
  min-height: 100vh;
  position: relative; 
  color: greenyellow;
+ padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px);
             
 & h2{
 font-size: 3rem;
 font-family: var(--primary-font);
-margin: 0 0 10px;
+margin: 0 0 clamp(24px, 3vw, 40px);
 text-transform: uppercase;
 font-weight: bold;
 text-shadow:0 0px 10px black;
@@ -320,6 +331,26 @@ font-family: var(--primary-font);
 margin-top: 10px;
 overflow-wrap: anywhere;
 
+}
+
+.myservices{
+    min-height: 100vh;
+    padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px);
+
+    & h2{
+        margin-bottom: clamp(24px, 3vw, 40px);
+    }
+}
+
+.carfe{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 40px);
+}
+
+.parent{
+    flex: 1 1 280px;
+    max-width: 360px;
 }
 
 #list-skills {
@@ -376,10 +407,13 @@ overflow-wrap: anywhere;
 
     .about,
     .projects,
-    .contacts{
+    .contacts,
+    .myservices{
         min-height: auto;
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .about h2,
@@ -396,20 +430,67 @@ overflow-wrap: anywhere;
 
     .about-info{
         width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
     }
 
     .about-greeting,
     .about-skills{
         width: 100%;
-        height: auto;
         min-height: 0;
-        padding: 24px 0;
+        padding: 16px 0;
+    }
+
+    .about-greeting{
+        grid-row: 1;
     }
 
     .about-greeting p{
         width: 100%;
         line-height: 1.5;
         overflow-wrap: anywhere;
+    }
+
+    #Ortlib{
+        width: min(100%, 360px);
+        grid-row: 2;
+    }
+
+    .about-skills{
+        grid-row: 3;
+        gap: 16px;
+    }
+
+    .about-skill{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        padding: 8px 0 12px;
+    }
+
+    .about-skill::-webkit-scrollbar{
+        height: 5px;
+    }
+
+    .about-skill::-webkit-scrollbar-thumb{
+        background: #2f81f7;
+        border-radius: 5px;
+    }
+
+    .input{
+        width: max-content;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .value{
+        flex: 0 0 auto;
+        align-items: center;
+        min-height: 48px;
+        margin: 0 4px;
     }
 
     .about-skim{
@@ -435,12 +516,35 @@ overflow-wrap: anywhere;
     }
 
     .buts{
-        grid-template-columns: 1fr;
-        width: min(100%, 360px);
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    #Ortlib{
-        width: 100%;
+    .buts button{
+        flex: 1 1 120px;
+        max-width: 180px;
+    }
+
+    .contacts-info-mall{
+        flex: 1 0 100%;
+        text-align: center;
+    }
+
+    .carfe{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .parent{
+        width: min(100%, 360px);
+        flex: 0 1 auto;
+    }
+
+    .marquee-container{
+        touch-action: pan-x;
     }
 }
 
@@ -485,21 +589,6 @@ display: none;
 }
 
 
-@media screen and (max-width:1330px){
-    .about-skills{
-        &:after{
-          right: calc(50% - 150px);
-        }
-    }
-.about-info{
-
-    flex-direction: column;
-    align-items: center;
-}
-
-}
-
-
 @media screen and (max-width:500px){
 .main-page{
     h1{
@@ -516,4 +605,24 @@ display: none;
 
 }
 
+@media screen and (min-width:701px) and (max-width:1100px){
+    .about-info{
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+        gap: 24px;
+    }
 
+    .about-greeting{
+        grid-column: 1 / -1;
+        min-height: 0;
+    }
+
+    #Ortlib{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .about-skills{
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
