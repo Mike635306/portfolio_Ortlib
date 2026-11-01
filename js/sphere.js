@@ -26,7 +26,7 @@
         function initScene() {
             try {
                 // Global variables
-                let scene, camera, renderer, sphere, codeRing = [];
+                let scene, camera, renderer, sphere, codeRing = [], container;
                 let sphereGroup, ringGroup;
                 
                 // Code elements for display
@@ -50,16 +50,19 @@
                     // Create scene
                     scene = new THREE.Scene();
                     
+                    container = document.getElementById('container');
+                    const { clientWidth, clientHeight } = container;
+
                     // Create camera
-                    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                    camera = new THREE.PerspectiveCamera(75, clientWidth / clientHeight, 0.1, 1000);
                     camera.position.z = 8;
                     
                     // Create renderer
                     renderer = new THREE.WebGLRenderer({ antialias: true });
-                    renderer.setSize(window.innerWidth, window.innerHeight);
+                    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+                    renderer.setSize(clientWidth, clientHeight);
                     renderer.setClearColor(0x000000);
                     
-                    const container = document.getElementById('container');
                     container.appendChild(renderer.domElement);
                     
                     // Hide loading
@@ -207,9 +210,9 @@
 
                 // Handle window resize
                 function onWindowResize() {
-                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.aspect = container.clientWidth / container.clientHeight;
                     camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
+                    renderer.setSize(container.clientWidth, container.clientHeight);
                 }
 
                 window.addEventListener('resize', onWindowResize);

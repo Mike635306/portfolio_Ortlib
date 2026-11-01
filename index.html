@@ -19,20 +19,72 @@
             <!-- ==================== HERO ==================== -->
             <section class="main-page container">
                 <div id="container">
-                    <div class="loading" id="loading">Loading 3D Scene...</div>
+                    <div class="loading" id="loading" data-i18n="loading">Loading 3D Scene...</div>
                 </div>
 
                 <aside class="aside-nav">
-                    <div><a href="#about">ABOUT ME</a></div>
-                    <div><a href="#projects">My Projects</a></div>
-                    <div><a href="#contacts">Contacts</a></div>
-                    <div><a href="#myservices">My Services</a></div>
+                    <div><a href="#about" data-i18n="nav.about">ABOUT ME</a></div>
+                    <div><a href="#projects" data-i18n="nav.projects">My Projects</a></div>
+                    <div><a href="#contacts" data-i18n="nav.contacts">Contacts</a></div>
+                    <div><a href="#myservices" data-i18n="nav.services">My Services</a></div>
                 </aside>
+
+                    
+               <div class="language">
+
+                 <label class="checkbox-wrapper">
+                 <input type="radio" name="language" value="ru" checked />
+                 <div class="checkmark">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                 <path
+                  d="M20 6L9 17L4 12"
+                 stroke-width="3"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 ></path>
+                 </svg>
+                  </div>
+                  <span class="labaf">РУС</span>
+                 </label>
+
+<label class="checkbox-wrapper">
+  <input type="radio" name="language" value="en" />
+  <div class="checkmark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path
+        d="M20 6L9 17L4 12"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+  <span class="labaf">ENG</span>
+</label>
+
+<label class="checkbox-wrapper">
+  <input type="radio" name="language" value="de" />
+  <div class="checkmark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path
+        d="M20 6L9 17L4 12"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+  <span class="labaf">DEU</span>
+</label>
+
+
+</div>
+
 
                 <h1>Ortlib Michael</h1>
 
                 <div class="controls">
-                    <button id="message-btn">Message me</button>
+                    <button id="message-btn" data-i18n="hero.message">Message me</button>
 
                     <button id="github-btn">
                         <svg viewBox="0 0 24 24" fill="currentColor" height="28" width="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -45,11 +97,11 @@
 
             <!-- ==================== ABOUT ==================== -->
             <section id="about" class="about container">
-                <h2>About me</h2>
+                <h2 data-i18n="about.title">About me</h2>
 
                 <div class="about-info">
                     <div class="about-greeting">
-                        <p>
+                        <p data-i18n="about.intro">
                             "Hi there ✌️!" My name is Ortlib Michael.
                             I'm a 16-years-old developer from Russia who loves building software and applications.
                             I enjoy turning ideas into real, working projects and always look for new things to learn
@@ -60,11 +112,11 @@
                     <img id="Ortlib" src="./img/Ortlib.png" alt="Portrait of Ortlib Michael">
 
                     <div class="about-skills">
-                        <h3>Skills</h3>
+                        <h3 data-i18n="about.skills">Skills</h3>
 
                         <div class="about-skill">
                             <!-- From Uiverse.io by BiliBC034 -->
-                            <div class="input">
+                             <div class="input">
                                 <button class="value" type="button">
                                     <img width="30" height="30" src="./img/logo/JavaScript.png" alt="JavaScript">
                                     JavaScript
@@ -109,7 +161,7 @@
 
             <!-- ==================== PROJECTS ==================== -->
             <section id="projects" class="projects container">
-                <h2>My Projects</h2>
+                <h2 data-i18n="projects.title">My Projects</h2>
 
                 <div class="marquee-container">
                     <div class="marquee">
@@ -134,25 +186,25 @@
                 </div>
 
                 <div class="projects_invite">
-                    <p>If you need a</p>
+                    <p data-i18n="projects.need">If you need a</p>
                     <p id="element"></p>
-                    <button id="tme" class="jsec" type="button">help</button>
+                    <button id="tme" class="jsec" type="button" data-i18n="projects.help">help</button>
                 </div>
             </section>
 
             <!-- ==================== CONTACTS ==================== -->
             <section id="contacts" class="contacts container">
-                <h2>Contacts</h2>
+                <h2 data-i18n="contacts.title">Contacts</h2>
 
                 <div class="buts">
                     <button class="btuy" id="btuy" type="button">
-                        Github <img src="./img/messege/githab.png" alt="GitHub icon">
+                        <span>Github</span> <img src="./img/messege/githab.png" alt="GitHub icon">
                     </button>
                     <button class="btue" id="btue" type="button">
-                        Telegram <img src="./img/messege/telegram.png" alt="Telegram icon">
+                        <span>Telegram</span> <img src="./img/messege/telegram.png" alt="Telegram icon">
                     </button>
                     <button class="btuq" id="btuq" type="button">
-                        MAX <img src="./img/messege/max.png" alt="MAX icon">
+                        <span>MAX</span> <img src="./img/messege/max.png" alt="MAX icon">
                     </button>
 
                     <div class="contacts-info-mall">
@@ -164,20 +216,20 @@
 
             <!-- ==================== SERVICES ==================== -->
             <section id="myservices" class="myservices container">
-                <h2>My Services</h2>
+                <h2 data-i18n="services.title">My Services</h2>
 
                 <div class="carfe">
 
                     <div class="parent">
                         <div class="service-card">
                             <div class="content-box">
-                                <span class="card-title">Сonsultation</span>
+                                <span class="card-title" data-i18n="services.consultation.title">Сonsultation</span>
                                 <p class="card-content">
-                                    You can ask any question regarding websites.
-                                    <span class="price">Price: 1200руб</span>
+                                    <span data-i18n="services.consultation.description">You can ask any question regarding websites.</span>
+                                    <span class="price" data-i18n="services.consultation.price">Price: 1200руб</span>
                                 </p>
-                                <span class="Write" id="Write">Write to me</span>
-                                <span class="Writeqe" id="Writeqe">Write to me</span>
+                                <span class="Write" id="Write" data-i18n="services.write">Write to me</span>
+                                <span class="Writeqe" id="Writeqe" data-i18n="services.write">Write to me</span>
                             </div>
                         </div>
                     </div>
@@ -185,13 +237,13 @@
                     <div class="parent">
                         <div class="maq">
                             <div class="content-box">
-                                <span class="card-title">Turnkey website</span>
+                                <span class="card-title" data-i18n="services.website.title">Turnkey website</span>
                                 <p class="card-content">
-                                    I am open to discussing reasonable and fair prices via private messages.
-                                    <span class="price">Price: from 15 000руб to 170 000руб</span>
+                                    <span data-i18n="services.website.description">I am open to discussing reasonable and fair prices via private messages.</span>
+                                    <span class="price" data-i18n="services.website.price">Price: from 15 000руб to 170 000руб</span>
                                 </p>
-                                <span class="Write" id="Writew">Write to me</span>
-                                <span class="Writeqe" id="Writeqde">Write to me</span>
+                                <span class="Write" id="Writew" data-i18n="services.write">Write to me</span>
+                                <span class="Writeqe" id="Writeqde" data-i18n="services.write">Write to me</span>
                             </div>
                         </div>
                     </div>
@@ -199,13 +251,13 @@
                     <div class="parent">
                         <div class="qye">
                             <div class="content-box">
-                                <span class="card-title">Turnkey Telegram bot</span>
+                                <span class="card-title" data-i18n="services.bot.title">Turnkey Telegram bot</span>
                                 <p class="card-content">
-                                    I am open to discussing reasonable and fair prices via private messages.
-                                    <span class="priceaw">Price: from 5 000руб to 50 000руб</span>
+                                    <span data-i18n="services.bot.description">I am open to discussing reasonable and fair prices via private messages.</span>
+                                    <span class="priceaw" data-i18n="services.bot.price">Price: from 5 000руб to 50 000руб</span>
                                 </p>
-                                <span class="Write" id="Writep">Write to me</span>
-                                <span class="Writeqe" id="Writeqebr">Write to me</span>
+                                <span class="Write" id="Writep" data-i18n="services.write">Write to me</span>
+                                <span class="Writeqe" id="Writeqebr" data-i18n="services.write">Write to me</span>
                             </div>
                         </div>
                     </div>
